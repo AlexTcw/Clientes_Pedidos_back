@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Clientes_Pedidos_back
+  datasource:
+    url: jdbc:mysql://172.27.17.149:4000/Clientes_Pedidos_bd
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        ddl-auto: none
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  main:
+    banner-mode: off
+server:
+  port: 9000
+logging:
+  pattern:
+    dateformat: HH:mm
