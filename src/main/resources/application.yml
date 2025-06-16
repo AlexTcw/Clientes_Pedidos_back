@@ -2,7 +2,7 @@ spring:
   application:
     name: Clientes_Pedidos_back
   datasource:
-    url: jdbc:mysql://172.27.17.149:4000/Clientes_Pedidos_bd
+    url: jdbc:mysql://192.168.1.77:4000/Clientes_Pedidos_bd
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -29,3 +29,6 @@ server:
 logging:
   pattern:
     dateformat: HH:mm
+springdoc:
+  swagger-ui:
+    path: /docs
