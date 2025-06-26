@@ -8,28 +8,23 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
-@Table(name = "producto")
+@Table(name = "metodo_pago")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Producto implements Serializable {
+public class MetodoPago implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
-    @Column(name = "producto_id")
+    @Column(name = "metodo_pago_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long productoId;
-    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL)
-    private List<CarritoProducto>  carritos;
-    @Column(name = "precio")
-    private double precio;
+    private Long metodoPagoId;
     @Column(name = "nombre")
-    private String nombre;
-    @Column(name = "sku")
-    private String sku;
+    private String  nombre;
+    @Column(name = "descripcion")
+    private String  descripcion;
 }
