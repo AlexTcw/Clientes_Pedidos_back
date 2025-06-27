@@ -26,7 +26,7 @@ public class Colonia implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "municipio_id", nullable = false)
     private Municipio municipio;
-    @OneToMany(mappedBy = "municipio")
+    @OneToMany(mappedBy = "colonia")
     private Set<Direccion> direcciones;
     @Column(name = "nombre")
     private String nombre;

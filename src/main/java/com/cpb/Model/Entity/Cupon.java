@@ -29,8 +29,7 @@ public class Cupon implements Serializable {
     @OneToMany(mappedBy = "cupon",fetch = FetchType.LAZY)
     private List<Pedido> pedidos;
     @Column(name = "tipo")
-    @Enumerated(EnumType.STRING)
-    private TipoEnum tipo;
+    private String tipo;
     @Column(name = "codigo")
     private String codigo;
     @Column(name = "porcentaje")
